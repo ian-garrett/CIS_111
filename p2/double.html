@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title> Doubler </title>
+
+	<script>
+	function numberfunction(){
+		var number = document.getElementById('numberBox').value;
+		var doubled = number*2;
+		document.getElementById('numberBox').value = doubled;
+
+		var numberofclicks = parseFloat(document.getElementById('divCount').innerHTML);
+		document.getElementById('divCount').innerHTML=numberofclicks+1
+	}
+	</script>
+</head>
+
+<body>
+<h2>Ex. 5.19: 
+Double-it!</h2>
+<p>
+Enter a number N: 
+  <input type="text" id="numberBox" size=10 >
+<br><br>
+<input type="button" value="Double!" onclick="numberfunction();" >
+<br>
+<br>
+<input type="button" value="Reset Number of Clicks" 
+ onClick="document.getElementById('divCount').innerHTML = 0;" 
+>
+</p>
+<hr>
+<h2>Number of Clicks</h2>
+<div id="divCount">0</div>
+</body>
+</html>
